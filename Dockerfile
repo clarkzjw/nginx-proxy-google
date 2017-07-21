@@ -1,5 +1,5 @@
 FROM ubuntu:latest
-MAINTAINER clarkzjw <clarkzjw@gmail.com>
+LABEL maintainer clarkzjw <clarkzjw@gmail.com>
 
 # Install Ubuntu and base software.
 RUN \
@@ -9,7 +9,7 @@ RUN \
   apt-get install -y -qq git wget build-essential zlib1g-dev libpcre3-dev git gcc g++ make && \
   rm -rf /var/lib/apt/lists/*
 
-ENV NGINX_VERSION=1.11.9 PCRE_VERSION=8.40 OPENSSL_VERSION=1.1.0e ZLIB_VERSION=1.2.11
+ENV NGINX_VERSION=1.13.3 PCRE_VERSION=8.41 OPENSSL_VERSION=1.1.0f ZLIB_VERSION=1.2.11
 
 # Get Source Code
 RUN \
